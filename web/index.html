@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EasyRecon — AI reconciliation for Pakistan pharmacies. Cash, stock, udhaar, supplier bills — Roman Urdu answers on WhatsApp." />
+  <title>EasyRecon — Pharmacy Hisaab, Phone Pe</title>
+  <link rel="stylesheet" href="/static/css/app.css" />
+</head>
+<body>
+  <div class="bg-mesh"></div>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="/">
+        <span class="logo-icon">ER</span>
+        EasyRecon
+      </a>
+      <div class="nav-links">
+        <a href="#problem" class="hide-mobile">Problem</a>
+        <a href="#features" class="hide-mobile">Features</a>
+        <a href="#how" class="hide-mobile">How it works</a>
+        <span class="status-pill" id="status-pill">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="status-text">Checking…</span>
+        </span>
+        <a href="/demo" class="btn btn-primary btn-sm">Live demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <div class="hero-badge">🇵🇰 Built for Lahore pharmacies</div>
+      <h1>Dukaan ka hisaab,<br /><span>phone pe, Roman Urdu mein</span></h1>
+      <p class="hero-lead">
+        EasyRecon aap ke POS se cash short, stock, sales, supplier bills aur udhaar
+        samjhata hai — bina dashboard khole. Subah report + din bhar sawal jawab,
+        jaise WhatsApp pe manager baat karta hai.
+      </p>
+      <div class="hero-cta">
+        <a href="/demo" class="btn btn-primary">Try live demo →</a>
+        <button type="button" class="btn btn-ghost" id="btn-report">Sample daily report</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>5 sec</strong><span>Daily report (no AI)</span></div>
+        <div class="stat"><strong>Roman Urdu</strong><span>Natural Q&amp;A</span></div>
+        <div class="stat"><strong>POS-ready</strong><span>Oscar, Excel, MySQL</span></div>
+      </div>
+    </div>
+
+    <div class="phone-mock" aria-hidden="true">
+      <div class="phone-screen">
+        <div class="phone-header">
+          <div class="phone-avatar">ER</div>
+          <div>
+            <h3>EasyRecon</h3>
+            <p>Bismillah Medical Store · online</p>
+          </div>
+        </div>
+        <div class="phone-msgs" id="hero-msgs">
+          <div class="msg-in">Assalam o Alaikum! Aaj ki reconciliation:</div>
+          <div class="msg-in"><strong>Cash short:</strong> PKR 3,200 (evening shift)</div>
+          <div class="msg-in"><strong>Unpaid suppliers:</strong> 4 invoices</div>
+          <div class="msg-out">Panadol pari hai?</div>
+          <div class="msg-in">Panadol Extra <strong>3 strips</strong> available. 500mg out of stock.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="problem">
+    <p class="section-label">The problem</p>
+    <h2>Malik counter pe nahi hota — paisa phir bhi leak hota hai</h2>
+    <p class="section-desc">
+      Lahore ki medical stores par POS chal raha hota hai, lekin owner ko asal dard
+      yeh hai: cash short pata nahi kab hua, udhaar recover nahi ho raha, expiry pe
+      maal zaya, supplier bill due aur staff pe shak.
+    </p>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">💸</div>
+        <h3>Cash short & chori</h3>
+        <p>Shift close pe register aur system match nahi. Owner ko din ke end pe pata chalta hai — jab nuqsan ho chuka hota hai.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📦</div>
+        <h3>Expiry & stock blind spot</h3>
+        <p>POS mein alert hai lekin owner action nahi leta. Har mahine lakhs ka maal expire ho sakta hai.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📒</div>
+        <h3>Udhaar & suppliers</h3>
+        <p>Khata alag, POS alag. Kon recover karna hai aur is hafte kitna supplier ko dena hai — clear picture nahi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <p class="section-label">What you get</p>
+    <h2>POS ke upar — owner intelligence layer</h2>
+    <p class="section-desc">
+      Hum Oscar / MedicsPK replace nahi karte. Hum aap ke existing data se
+      reconciliation, alerts aur Roman Urdu jawab dete hain.
+    </p>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-icon">☀️</div>
+        <h3>Subah 7 report</h3>
+        <p>WhatsApp pe: cash short, unpaid bills, expiry risk, udhaar over limit — ek message mein.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <h3>Poochho kuch bhi</h3>
+        <p>"Iss month kitni sale?" "Kon si dawai zyada biki?" Roman Urdu, English, typos — samajh jata hai.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <h3>Leak detection</h3>
+        <p>Duplicate payments, stock mismatch, suspicious patterns — inbox mein flags, drama nahi.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏪</div>
+        <h3>Multi-branch ready</h3>
+        <p>Johar Town vs Gulberg — compare cash aur sales without visiting each store.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔒</div>
+        <h3>Read-only & honest</h3>
+        <p>Sirf SELECT queries. Paisa invent nahi karta. Data nahi hai to kehta hai — jhoot nahi.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📱</div>
+        <h3>WhatsApp first</h3>
+        <p>Dashboard optional. Owner jahan already hai — wahan EasyRecon bhi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <p class="section-label">How it works</p>
+    <h2>Connect → Report → Ask</h2>
+    <p class="section-desc">Pilot se production tak — pehle Excel, phir live POS.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Connect POS</h4>
+        <p>Excel export, MySQL, ya Oscar read-only</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Daily report</h4>
+        <p>Subah automatic WhatsApp brief</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>Ask anything</h4>
+        <p>Roman Urdu Q&amp;A over your data</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Learn & improve</h4>
+        <p>Corrections se aap ki dukaan samajh jata hai</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <div class="cta-inner">
+      <h2>Abhi demo chalayein</h2>
+      <p>
+        Neeche sample pharmacy (Bismillah Medical Store, Lahore) ka data hai.
+        Apni dukaan pilot ke baad connect hogi.
+      </p>
+      <a href="/demo" class="btn btn-primary">Open live chat demo</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    EasyRecon · Pharmacy reconciliation AI · Lahore, Pakistan<br />
+    <a href="/demo">Demo</a> · <a href="/health">API health</a> · <a href="/report/whatsapp">Report JSON</a>
+  </footer>
+
+  <div class="modal-overlay" id="report-modal">
+    <div class="modal">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <h3>Sample daily report</h3>
+      <pre id="report-body">Loading…</pre>
+    </div>
+  </div>
+
+  <script>
+    // Health status
+    fetch("/health")
+      .then(r => r.json())
+      .then(d => {
+        const dot = document.getElementById("status-dot");
+        const text = document.getElementById("status-text");
+        const ok = d.status === "ok";
+        dot.classList.add(ok ? "ok" : "warn");
+        text.textContent = ok ? "AI ready" : "Degraded";
+      })
+      .catch(() => {
+        document.getElementById("status-text").textContent = "Offline";
+      });
+
+    // Sample report modal
+    const modal = document.getElementById("report-modal");
+    document.getElementById("btn-report").onclick = async () => {
+      modal.classList.add("open");
+      const pre = document.getElementById("report-body");
+      pre.textContent = "Loading…";
+      try {
+        const r = await fetch("/report/whatsapp");
+        const d = await r.json();
+        pre.textContent = d.text || JSON.stringify(d, null, 2);
+      } catch {
+        pre.textContent = "Server offline. Run: python -m api.main";
+      }
+    };
+    document.getElementById("modal-close").onclick = () => modal.classList.remove("open");
+    modal.onclick = e => { if (e.target === modal) modal.classList.remove("open"); };
+
+    // Hero chat animation
+    const msgs = [
+      { t: "msg-out", x: "Iss month kitni sales?" },
+      { t: "msg-in", x: "Pichle mahine <strong>161 bills</strong>, 356 units, PKR 555,253." },
+    ];
+    let mi = 0;
+    setInterval(() => {
+      const box = document.getElementById("hero-msgs");
+      if (!box || box.children.length > 8) return;
+      const m = msgs[mi % msgs.length];
+      const el = document.createElement("div");
+      el.className = m.t;
+      el.innerHTML = m.x;
+      box.appendChild(el);
+      mi++;
+    }, 4000);
+  </script>
+</body>
+</html>

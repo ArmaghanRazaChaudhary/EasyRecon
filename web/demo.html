@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0b141a" />
+  <title>Live demo — EasyRecon</title>
+  <link rel="stylesheet" href="/static/css/app.css" />
+</head>
+<body>
+  <div class="bg-mesh"></div>
+
+  <div class="chat-layout">
+    <div class="demo-banner">
+      Demo mode · Sample store data · Production mein aap ka POS connect hoga
+    </div>
+
+    <header class="chat-top">
+      <a href="/" class="chat-back" title="Home">←</a>
+      <div class="chat-avatar">ER</div>
+      <div class="chat-info">
+        <h1 id="pharmacy-title">Bismillah Medical Store</h1>
+        <p>EasyRecon · session <span id="sid">…</span></p>
+      </div>
+      <a href="/" class="btn btn-ghost btn-sm" style="flex-shrink:0">About</a>
+      <button type="button" id="tts-toggle" class="btn btn-ghost btn-sm chat-tts-btn" title="Auto-read replies" aria-label="Toggle text to speech">🔊</button>
+      <button type="button" id="new-chat" class="btn btn-ghost btn-sm" style="flex-shrink:0" title="New chat">New chat</button>
+    </header>
+
+    <div class="chips-bar">
+      <button class="chip" data-q="Aaj cash short kyun hai?">💰 Cash short</button>
+      <button class="chip" data-q="Panadol pari hai?">💊 Panadol stock</button>
+      <button class="chip" data-q="Pichle mahine kitni sales hui?">📊 Last month sales</button>
+      <button class="chip" data-q="Kon se supplier ke unpaid invoices hain?">🏭 Unpaid suppliers</button>
+      <button class="chip" data-q="Top 5 medicines quantity wise">🏆 Top 5 medicines</button>
+      <button class="chip" data-q="Expired stock dikhao">⚠️ Expiry</button>
+    </div>
+
+    <div id="chat"></div>
+
+    <footer class="chat-footer">
+      <button type="button" id="mic-btn" class="chat-mic" aria-label="Voice input" title="Mic se boliye (Roman Urdu / Urdu)">🎤</button>
+      <div class="chat-input-wrap">
+        <input id="input" type="text" placeholder="Roman Urdu mein poochhein… ya mic dabayein" autocomplete="off" enterkeyhint="send" />
+      </div>
+      <button type="button" id="send" class="chat-send" aria-label="Send">➤</button>
+    </footer>
+  </div>
+
+  <script src="/static/js/speech.js"></script>
+  <script src="/static/js/chat.js"></script>
+  <script>
+    initChat({
+      welcome: "Assalam o Alaikum! Main EasyRecon hoon — Bismillah Medical Store ka sample assistant.\n\nCash, stock, sales ke sawal poochhein. **Mic** dabayein, boliye, phir **stop ⏹** dabayein send ke liye."
+    });
+  </script>
+</body>
+</html>

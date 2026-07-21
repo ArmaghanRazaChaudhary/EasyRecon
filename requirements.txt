@@ -1,0 +1,13 @@
+faker==37.1.0
+fastapi==0.115.12
+httpx==0.28.1
+pydantic==2.11.3
+python-dotenv==1.1.0
+python-multipart>=0.0.9
+uvicorn==0.34.0
+twilio>=9.0.0,<10
+azure-cognitiveservices-speech>=1.40.0
+edge-tts>=6.1.0
+faster-whisper>=1.1.0
+pyttsx3>=2.90
+imageio-ffmpeg>=0.5.0
