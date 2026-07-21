@@ -171,7 +171,7 @@ EasyRecon/
 
 ---
 
-## Design notes (for engineers / hiring managers)
+## Design notes
 
 - **Tool use, not chat-with-DB:** the model proposes SQL; a Python sandbox executes read-only-style queries and returns rows.
 - **Hybrid latency:** canned SQL + deterministic formatters skip a second LLM round-trip when results are simple tables/scalars (`FAST_ANSWERS`).
